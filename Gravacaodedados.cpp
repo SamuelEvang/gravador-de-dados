@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    printf("Digite o Nome: ");
+    char nome[50];
+    fgets(nome, 50, stdin);
+
+    printf("\nNumero do telefone: ");
+    char telefone[13];
+    fgets(telefone, 13, stdin);
+
+    printf("\nEndereco: ");
+    char endereco[50];
+    fgets(endereco, 50, stdin);
+
+    printf("\nFinalizar Cadastro");
+    printf("\n1 - Salvar");
+    printf("\n2 - Cancelar\n");
+
+    char sopcao[5];
+    fgets(sopcao, 5, stdin);
+    int opcao = atoi(sopcao);
+
+    if (opcao == 1) {
+        printf("Cadastro realizado com sucesso!\n");
+    } else if (opcao == 2) {
+        printf("Cadastro cancelado. \n");
+    } else {
+        printf("Opção desconhecida %d.\n", opcao);
+    }
+
+    printf("Nome: %s\n", nome);
+    printf("Telefone: %s\n", telefone);
+    printf("Endereco: %s\n", endereco);
+
+};
